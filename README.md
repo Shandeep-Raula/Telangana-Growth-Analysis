@@ -4,6 +4,6 @@
 <h3 align="center">Data Model</h3>
 <img align="center" src="https://github.com/Shandeep-Raula/Telangana-Growth-Analysis/blob/main/Data_Model.png"/> 
 
-'''bash
+```bash
   pip install pandas
-'''
+```
