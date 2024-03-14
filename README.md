@@ -7,6 +7,7 @@
 <h3 align="center">Tech Stack</h3>
 
 <p>Pandas</p>
+
 ```bash
   pip install pandas
 ```
