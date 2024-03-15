@@ -8,7 +8,7 @@
 
 
 <p align="center"> 
- <a href="https://www.java.com" target="_blank" > <img src="https://github.com/Shandeep-Raula/Shandeep-Raula/blob/main/social/power%20bi.svg" alt="java" width="40" height="40"/> </a> 
+ <a href= "https://www.microsoft.com/en-us/power-platform/products/power-bi" target="_blank" > <img src="https://github.com/Shandeep-Raula/Shandeep-Raula/blob/main/social/power%20bi.svg" alt="java" width="40" height="40"/> </a> 
 </p>
 
 ```bash
