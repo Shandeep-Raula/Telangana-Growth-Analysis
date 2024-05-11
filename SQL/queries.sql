@@ -2,13 +2,13 @@
 --  across Fiscal yerar?
 -- across distrcts
 
-
-		SELECT d.fiscal_year, SUM(t.fuel_type_petrol) AS Petrol_type , SUM(t.fuel_type_electric) AS Electric_type , SUM(t.fuel_type_diesel) AS Diesel_type 
-		FROM transport AS t
-		JOIN date AS d
-		ON d.month = t.month
-		GROUP BY d.fiscal_year;
-
+SELECT EXTRACT(YEAR FROM month) AS Year ,
+       SUM(petrol) AS Petrol_type,
+       SUM(electric) AS Electric_type,
+       SUM(diesel) AS Diesel_type
+FROM transport
+GROUP BY Year
+ORDER BY Year;
 
 -- How does the distribution of vehicles vary by vehicle class
 -- (MotorCycle, MotorCar, AutoRickshaw, Agriculture) across different
@@ -16,10 +16,10 @@
 
 SELECT 
     d.district AS District, 
-    SUM(t.vehicleClass_MotorCycle) AS MotorCycle, 
-    SUM(t.vehicleClass_MotorCar) AS MotorCar,
-    SUM(t.vehicleClass_AutoRickshaw) AS AutoRickshaw, 
-    SUM(t.vehicleClass_Agriculture) AS Agriculture
+    SUM(t.motorcycle) AS MotorCycle, 
+    SUM(t.motorcar) AS MotorCar,
+    SUM(t.autorickshaw) AS AutoRickshaw, 
+    SUM(t.agriculture) AS Agriculture
 FROM 
     transport AS t 
 JOIN 
@@ -28,4 +28,3 @@ ON
     d.dist_code = t.dist_code
 GROUP BY 
     d.district;
-
