@@ -28,3 +28,29 @@ ON
     d.dist_code = t.dist_code
 GROUP BY 
     d.district;
+	
+-- How does the revenue generated from document registration vary
+-- across districts in Telangana? List down the top 5 districts that showed
+-- the highest revenue 
+ SELECT D.district , SUM(S.documents_registered_rev) AS tatal_Doc_Revenue 
+ FROM
+      stamps AS S 
+ JOIN
+      districts AS D
+ON S.dist_code = D.dist_code 
+GROUP BY D.district
+LIMIT 5;
+
+-- How does the revenue generated from document registration compare
+-- to the revenue generated from e-stamp challans across districts? List
+-- down the top 5 districts where e-stamps revenue contributes
+-- significantly more to the revenue than the documents
+
+
+SELECT  D.district ,  (SUM(S.documents_registered_rev) - SUM(S.estamps_challans_rev)) AS comparison_Doc_Estam_rev
+FROM stamps AS S
+JOIN districts AS D
+ON S.dist_code = D.dist_code
+GROUP BY D.district 
+LIMIT 5;
+
