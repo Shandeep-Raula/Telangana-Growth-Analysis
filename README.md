@@ -1,3 +1,7 @@
+
+
+
+
 ## Data Architecture
 <img align="center" src="https://github.com/Shandeep-Raula/Telangana-Growth-Analysis/blob/main/Workflow_of_project.png"/> 
 
